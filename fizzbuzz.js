@@ -1,10 +1,27 @@
+const readline = require("readline-sync");
+
 // This is our main function
 function fizzbuzz() {
-    console.log("Hello, World!");
+    
+    let flag = false;
+    let max;
+    let response;
+    console.log("Please enter the maximum number to be printed");
+
+    while (flag == false) {
+        response = readline.prompt();
+        max = parseInt(response);
+        if (max != NaN) {
+            if (max > 0) {
+                flag = true;
+            } else {
+            console.log("Please enter a positive number");
+        } }
+    }
 
     let n = 0;
-    while (n < 260) {
-        
+    while (n < max) {
+
         n++;
         let result = "";
         if (n % 3 == 0) {
